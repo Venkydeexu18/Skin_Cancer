@@ -14,4 +14,4 @@ Installation:
 Ensure all dependencies are installed by checking the requirements file or documentation.
 Commonly used tools include Python libraries, which can be installed using pip install -r requirements.txt.
 Completion:
-Once you have followed these steps, the skin cancer prediction process is complete.
+Once you have followed these steps, the skin cancer prediction process is done.
