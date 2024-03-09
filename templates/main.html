@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../static/sstyle.css">
+    <title>Skin Cancer</title>
+</head>
+
+<body>
+
+    <header class="fixed top-0 w-full z-30 bg-white-500 transition-all pt-2 shadow-lg">
+        <nav class="max-w-screen-xl px-6 sm:px-8 lg:px-10 mx-auto grid grid-flow-col py-3">
+            <div class="col-start-1 col-end-2 flex items-center">
+                <img class="h-16 aspect-ratio" src="../static/images/logo.jpg" alt="">
+                <h2 class="font-semicolon pl-2 text-3xl">SKIN CANCER</h2>
+            </div>
+            <ul class="hidden sm:flex col-start-12 col-end-16 text-black-500 items-center">
+                <a href="#home" class="px-4 py-2 mx-2 cursor-pointer inline-block relative text-black-500 hover:text-orange-500 link-underline underline-animate">Home</a>
+                <!-- <a href="#about" class="px-4 py-2 mx-2 cursor-pointer inline-block relative text-black-500 hover:text-orange-500 link-underline underline-animate">About Us</a>
+                <a href="#issues"class="px-4 py-2 mx-2 cursor-pointer inline-block relative text-black-500 hover:text-orange-500 link-underline underline-animate">Issues</a> -->
+                <a href="#preview"class="px-4 py-2 mx-2 cursor-pointer inline-block relative text-black-500 hover:text-orange-500 link-underline underline-animate">Preview</a>
+                <a href="#stat"class="px-4 py-2 mx-2 cursor-pointer inline-block relative text-black-500 hover:text-orange-500 link-underline underline-animate">Statistics</a>
+                <a href="/logout"class="px-4 py-2 mx-2 cursor-pointer inline-block relative text-black-500 hover:text-orange-500 link-underline underline-animate">Logout</a>
+                <h2 class="head_name">Welcome &nbsp&nbsp<b>{{ name }}</b></h2>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="home" class="max-w-screen-xl mt-20 mx-auto landing flex items-center justify-center">
+        <div class="w-1/2">
+            <h2 class="text-2xl md:text-4xl text-black font-mono">
+                Early detection saves lives. Regular skin checks can catch skin cancer before it spreads.!
+            </h2>
+        </div>
+    </div>
+
+
+    <div id="preview" class="bg-gray-200">
+        <div class="mx-auto container py-24">
+            <div class="flex justify-center items-center flex-col">
+                <div data-aos="fade-right">
+                <h1 class="lg:text-4xl md:text-4xl text-4xl font-black leading-10 text-center text-gray-800 font-serif">
+                    Skin Cancer Detection Using Deep Learning
+                </h1>
+                </div>
+                <br>
+                <div data-aos="fade-left">
+                <h2 class="lg:text-3xl md:text-3xl text-3xl font-black leading-10 text-center text-gray-800 font-serif">
+                    Upload Image...!
+                </h2>
+            </div>
+                <div class="pt-20 justify-center items-center md:px-4 gap-4 lg-gap-8">
+                    <div data-aos="zoom-in">
+                        <form action='/upload_image' method='post' enctype='multipart/form-data'>
+                            <input type='file' name='image' id='image' required placeholder='image'>
+                            <input type='submit' value='Upload'>
+                        </form>                        
+                        <h2 class="head_name">Predicted Type :  &nbsp&nbsp<b>{{ predicted_type }}</b></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div id="stat">
+    <div class="kill">
+    <img class="killer" src="../static/images/k1.png" alt=""> <br><br>
+    <img class="killer" src="../static/images/k2.png" alt=""> <br><br>
+    <img class="killer" src="../static/images/k3.png" alt="">
+    </div>
+</div>
+
+    <div class="text-center text-gray-700 p-8" style="background: rgb(0, 0, 0, 0.1);">
+        © 2024 Copyright: <a class="text-gray-800 fn1" href="#">Skin Cancer</a>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1500,
+        })
+    </script>
+
+</body>
+
+</html>

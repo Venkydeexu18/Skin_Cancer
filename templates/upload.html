@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!--bootstrap icons stylesheet-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='style_login.css')}}">
+    <title>eCourts</title>
+</head>
+
+<body>
+    {%include 'adminnav.html'%}
+    <h1 class="text-md-center text-lg-center text-dark fw-bold text-sm-start shadow m-3">Products</h1>
+    <div class="container m-5 ">
+        <div class="row">
+            {%for i in productdetails%}
+            <div class="col-4">
+                <div class="card my-3 text-center" style="width: 18rem;height: 26rem;">
+                    <div class="card-body">
+                        <img src="{{ url_for('static', filename='images/' + i[2].decode('utf-8')) }}" height="200"
+                            width="200" class="my-2" />
+                    </div>
+                </div>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+
+    <!--Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
